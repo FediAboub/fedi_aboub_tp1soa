@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="club">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="LEO" type="LEOType"/>
+                <xs:element name="bureau" type="BureauType"/>
+                <xs:element name="cabinet" type="CabinetType"/>
+                <xs:element name="membres" type="MembresType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Type pour les informations du club -->
+    <xs:complexType name="LEOType">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="dateCreation" type="xs:date"/>
+            <xs:element name="domaine" type="xs:string"/>
+            <xs:element name="statut" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BureauType">
+        <xs:sequence>
+            <xs:element name="membre" type="MembreBureauType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MembreBureauType">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="telephone" type="xs:string"/>
+            <xs:element name="dateEntree" type="xs:date"/>
+            <xs:element name="actif" type="xs:boolean"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+        <xs:attribute name="role" type="RoleBureauType" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="RoleBureauType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="President"/>
+            <xs:enumeration value="Secretaire"/>
+            <xs:enumeration value="Tresorier"/>
+            <xs:enumeration value="Vice-President"/>
+            <xs:enumeration value="Chef Protocol"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Type pour le cabinet (Chefs) -->
+    <xs:complexType name="CabinetType">
+        <xs:sequence>
+            <xs:element name="chef" type="ChefType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ChefType">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="telephone" type="xs:string"/>
+            <xs:element name="dateEntree" type="xs:date"/>
+            <xs:element name="actif" type="xs:boolean"/>
+            <xs:element name="nombreProjets" type="xs:integer"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+        <xs:attribute name="poste" type="PosteChefType" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="PosteChefType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Chef Ouverture Sociale"/>
+            <xs:enumeration value="Chef Loisir"/>
+            <xs:enumeration value="Chef Media"/>
+            <xs:enumeration value="Chef Effectif"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Type pour les membres simples -->
+    <xs:complexType name="MembresType">
+        <xs:sequence>
+            <xs:element name="membreSimple" type="MembreSimpleType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MembreSimpleType">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="dateInscription" type="xs:date"/>
+            <xs:element name="actif" type="xs:boolean"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+</xs:schema>

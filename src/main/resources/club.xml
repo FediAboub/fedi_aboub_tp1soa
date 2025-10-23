@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<club xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+    <LEO>
+        <nom>Club LEO</nom>
+        <dateCreation>2020-09-15</dateCreation>
+        <domaine>Charité</domaine>
+        <statut>Actif</statut>
+    </LEO>
+
+    <bureau>
+        <membre id="1" role="President">
+            <nom>Mohsen Jmal</nom>
+            <email>Mohsejlmal08@gmail.com</email>
+            <telephone>+216 44 323 296</telephone>
+            <dateEntree>2024-01-15</dateEntree>
+            <actif>true</actif>
+        </membre>
+
+        <membre id="2" role="Secretaire">
+            <nom>Feten Feki</nom>
+            <email>fetenfeki@gmail.com</email>
+            <telephone>+21626 402 213</telephone>
+            <dateEntree>2024-01-20</dateEntree>
+            <actif>true</actif>
+        </membre>
+
+        <membre id="3" role="Tresorier">
+            <nom>Farah Azaiez</nom>
+            <email>farahazaiez19@gmail.com</email>
+            <telephone>+216 26 181 404</telephone>
+            <dateEntree>2024-01-18</dateEntree>
+            <actif>true</actif>
+        </membre>
+
+        <membre id="4" role="Vice-President">
+            <nom>Yessmine Jarraya</nom>
+            <email>jarrayayesmine229@gmail.com</email>
+            <telephone>+216 23 639 145</telephone>
+            <dateEntree>2024-01-22</dateEntree>
+            <actif>true</actif>
+        </membre>
+        <membre id="5" role="Chef Protocol">
+            <nom>Fedi Aboub</nom>
+            <email>fedi.aboub2002@gmail.com</email>
+            <telephone>+216 92 908 087</telephone>
+            <dateEntree>2024-01-22</dateEntree>
+            <actif>true</actif>
+        </membre>
+    </bureau>
+
+    <cabinet>
+        <chef id="101" poste="Chef Ouverture Sociale">
+            <nom>Khadija GHorbel</nom>
+            <email>Khadijaghorbel05@gmail.com</email>
+            <telephone>+216 44 901 903</telephone>
+            <dateEntree>2024-02-10</dateEntree>
+            <actif>true</actif>
+            <nombreProjets>3</nombreProjets>
+        </chef>
+
+        <chef id="102" poste="Chef Loisir">
+            <nom>Nadia Njeh</nom>
+            <email>nadianjeh33@gmail.com</email>
+            <telephone>+216 26 000 746</telephone>
+            <dateEntree>2024-02-15</dateEntree>
+            <actif>true</actif>
+            <nombreProjets>2</nombreProjets>
+        </chef>
+
+        <chef id="103" poste="Chef Media">
+            <nom>Aziz ben salem</nom>
+            <email>aziz.benseelem@gmail.com</email>
+            <telephone>+216 50 671 275</telephone>
+            <dateEntree>2024-02-08</dateEntree>
+            <actif>true</actif>
+            <nombreProjets>4</nombreProjets>
+        </chef>
+
+        <chef id="104" poste="Chef Effectif">
+            <nom>Malek Kalle</nom>
+            <email>malekkallel9@gmail.com</email>
+            <telephone>+216 23 548 424</telephone>
+            <dateEntree>2024-02-12</dateEntree>
+            <actif>false</actif>
+            <nombreProjets>1</nombreProjets>
+        </chef>
+    </cabinet>
+
+    <membres>
+        <membreSimple id="201">
+            <nom>Leila Ben Ahmed</nom>
+            <email>leila.benahmed@esi.com</email>
+            <dateInscription>2024-03-01</dateInscription>
+            <actif>true</actif>
+        </membreSimple>
+
+        <membreSimple id="202">
+            <nom>Houssem Gara</nom>
+            <email>houssem.gara@esi.com</email>
+            <dateInscription>2024-03-05</dateInscription>
+            <actif>true</actif>
+        </membreSimple>
+
+        <membreSimple id="203">
+            <nom>Sarra Melliti</nom>
+            <email>sarra.melliti@esi.com</email>
+            <dateInscription>2024-02-28</dateInscription>
+            <actif>false</actif>
+        </membreSimple>
+    </membres>
+</club>
